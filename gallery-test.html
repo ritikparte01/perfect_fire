@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Gallery Test</title>
+    <style>
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .gallery-item {
+            width: 300px;
+            height: 250px;
+            border: 2px solid #ddd;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gallery Test</h1>
+    <div class="gallery-container" id="test-gallery"></div>
+
+    <script>
+        // Test with a few known files
+        const testFiles = [
+            "highlight.jpeg",
+            "home1.jpeg", 
+            "home2.jpeg",
+            "home3.jpeg",
+            "WhatsApp Image 2025-11-07 at 1.17.32 PM.jpeg"
+        ];
+
+        const container = document.getElementById('test-gallery');
+
+        testFiles.forEach((filename, index) => {
+            const filePath = `PFIMAGES/${filename}`;
+            const div = document.createElement('div');
+            div.className = 'gallery-item';
+            div.innerHTML = `
+                <img src="${filePath}" 
+                     alt="${filename}" 
+                     onload="console.log('Loaded: ${filename}')" 
+                     onerror="console.error('Failed: ${filename}', this.src)">
+            `;
+            container.appendChild(div);
+        });
+
+        console.log('Test gallery created with', testFiles.length, 'images');
+    </script>
+</body>
+</html>

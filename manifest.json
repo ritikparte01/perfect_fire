@@ -1,0 +1,16 @@
+{
+  "name": "Perfect Fire & Safety Services",
+  "short_name": "Perfect Fire",
+  "description": "Fire Protection & Safety Equipment in Mumbai, Palghar, Vasai-Virar, Nashik",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#e74c3c",
+  "icons": [
+    {
+      "src": "/images/pfs_logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
