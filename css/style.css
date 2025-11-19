@@ -16143,3 +16143,24 @@ footer li{
   color: #f0f0f0;
 }
 /* ADVERTISERS SERVICE CARD ENDED */
+
+
+
+
+
+.footer_mobile{
+	text-decoration: none !important;
+	color: white !important;
+}
+
+
+.footer_mobile[href^="tel"]{
+	text-decoration: none !important;
+	color: white !important;
+}
+
+
+.customer-logos .slick-track{
+	display: flex;
+	align-items: center;
+}
